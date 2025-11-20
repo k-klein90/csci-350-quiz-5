@@ -1,2 +1,6 @@
 # Character-level RNN
-A recurrent neural network (RNN) is used make predictions based on sequential input. At each step in the input sequence, the network uses both the current input and the history of past input to make a prediction.
+A recurrent neural network (RNN) is used make predictions based on sequential input. At each step in the input sequence, the network uses both the current input and the history of past input to make a prediction. <br/><br/>
+This RNN model has an embedding layer to extract features from the text, two LSTM (an RNN implementation) layers to make predictions based on previous state, and a dense layer for a final categorical prediction. The model accepts up to SEQ_LENGTH-long input. <br/><br/>
+The script tokenizes the chars in the training data into integer IDs so the model can read them, feeds continuous sequences from the trqining text into the model during training so that it can learn expected chars based on previous chars, and generates text by predicting one char at a time starting with a seed string. <br/><br/>
+I was unsuccessful in getting this script to run properly. I initially tried a method of generating text that seemed simple, but predicted seemingly random strings. This attempt is commented out in the script. After, I tried integrating the one step method from the TensorFlow tutorial into the starter code, but was unable to run generate_text() wtihout errors. <br/><br/>
+Because we had little time to work in groups during class, this submission is solely my own work.
